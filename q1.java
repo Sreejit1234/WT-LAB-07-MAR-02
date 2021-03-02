@@ -5,7 +5,7 @@
  */
 public class q1 {
     public static void main(String[] args) {
-        new Kiitian().course("CSE");
+        new Kiitian(1905, 905).course("CSE");
     }
 }
 
@@ -17,8 +17,13 @@ abstract class Student {
 }
 
 class Kiitian extends Student {
+    Kiitian(int regno, int roll) {
+        super.regno = regno;
+        super.roll = roll;
+    }
+
     @Override
     void course(String yourCourse) {
-        System.out.println("Your Course: " + yourCourse);
+        System.out.println(regno + " " + roll + "-> Your Course: " + yourCourse);
     }
 }
